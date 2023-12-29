@@ -66,7 +66,7 @@ public class BatchConfig {
                         new Range(10, 19), new Range(20, 30),
                         new Range(31, 42), new Range(43, 48),
                         new Range(49, 62), new Range(63, 80))
-                .names("tipo", "data", "valor", "cpf", "cartao", "hora", "donaDaLoja", "nomeDaLoja")
+                .names("tipo", "data", "valor", "cpf", "cartao", "hora", "donoDaLoja", "nomeDaLoja")
                 .targetType(TransacaoCNAB.class)
                 .build();
     }
@@ -93,7 +93,7 @@ public class BatchConfig {
                 .dataSource(dataSource)
                 .sql("""
                         INSERT INTO transacao (
-                            tipo, data, valor, cpf, cartao, hora, dona_loja, nome_loja
+                            tipo, data, valor, cpf, cartao, hora, dono_loja, nome_loja
                         )VALUES (
                             :tipo, :data, :valor, :cpf, :cartao, :hora, :donoDaLoja, :nomeDaLoja
                         )
