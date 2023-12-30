@@ -1,4 +1,4 @@
-package br.com.rafaelsaca.backend;
+package br.com.rafaelsaca.backend.domain;
 
 import java.math.BigDecimal;
 import java.sql.Date;
