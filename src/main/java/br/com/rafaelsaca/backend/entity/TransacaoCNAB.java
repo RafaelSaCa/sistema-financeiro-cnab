@@ -1,4 +1,4 @@
-package br.com.rafaelsaca.backend.domain;
+package br.com.rafaelsaca.backend.entity;
 
 import java.math.BigDecimal;
 
