@@ -28,6 +28,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
 import org.springframework.transaction.PlatformTransactionManager;
 
+import br.com.rafaelsaca.backend.entity.TipoTransacao;
 import br.com.rafaelsaca.backend.entity.Transacao;
 import br.com.rafaelsaca.backend.entity.TransacaoCNAB;
 
@@ -83,6 +84,11 @@ public class BatchConfig {
     @Bean
     ItemProcessor<TransacaoCNAB, Transacao> processor() {
         return item -> {
+            var tipoTransacao = TipoTransacao.findByTipo(item.tipo());
+            var valorNormalizado = item.valor()
+                    .divide(new BigDecimal(100))
+                    .multiply(tipoTransacao.getSinal());//saber se transação é debito ou credito pelo sinal
+
             // Wither pattern
             var transacao = new Transacao(
                     null, item.tipo(), null, item.valor().divide(BigDecimal.valueOf(100)), item.cpf(),
