@@ -1,14 +1,8 @@
-# Estudo
-Resolução de desafio de programação back-end, solucionado em : https://www.youtube.com/playlist?list=PLiFLtuN04BS1c-JvhKFxYyeD-GVtnwUcx
-por @giulianabezerra.
+# React + Vite
 
-Aqui, replico o sistema já solucionado, com o intuito de absorver todo o conteúdo assistido.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-# Descrição do projeto
-Você recebeu um arquivo CNAB com os dados das movimentações finanaceira de várias lojas. Precisamos criar uma maneira para que estes dados sejam importados para um banco de dados.
+Currently, two official plugins are available:
 
-Sua tarefa é criar uma interface web que aceite upload do arquivo CNAB, normalize os dados e armazene-os em um banco de dados relacional e exiba essas informações em tela.
-
-# Referência
-Desafio baseado em :https://github.com/Pagnet/desafio-back-end?tab=readme-ov-file#documenta%C3%A7%C3%A3o-do-cnab
-
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
